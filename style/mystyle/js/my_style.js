@@ -59,7 +59,7 @@ $("#mobile-toggle").click(function () {
     navStatus = false;
     document.getElementById("overlay").style.display = "none";
     $("#nav-button").removeClass();
-    $("#nav-button").addClass("fas fa-bars ml-1")
+    $("#nav-button").addClass("fas fa-bars")
   } else {
     $(".mobile-navbar").animate({
       left: "0px",

@@ -176,7 +176,7 @@
             <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-8 pb-5 faq-div-alls " style="padding: 0;">
                 <div class="row pb-5">
                     <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <div class="faq-div-all d-flex">
+                        <div class="faq-div-all d-flex" data-toggle="modal" data-target="#faqModal">
                             <div class="faq_image">
                                 <img class="" src="style/mystyle/img/Vector.png">
                             </div>
@@ -678,6 +678,23 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="faqModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h5 class="modal-title" id="exampleModalLongTitle">Həcm çəkisi nədir və necə hesablanır?</h5>
+            </div>
+            <div class="modal-body">
+                Türkiyə sifariş olunan bağlamanın çatdırılma haqqı çəkiyə görə hesablanır. Ölçüsü 1 metrdən böyük olan bağlamaların çatdırılma haqqı həcmi çəkiyə görə hesablanır. Həcmi çəkinin hesablanması üçün ( ( En (m) * Hündürlük (m) * Uzunluq (m) ) / 0.006 ) * Qiymət standartı tətbiq edilir.
+            </div>
+            
+          </div>
+        </div>
+      </div>
     <script src="./style/bootstrap/jquery/jquery-3.4.1.min.js"></script>
     <script src="./style/bootstrap/jquery/popper.min.js"></script>
     <script src="./style/slick/slick.min.js"></script>

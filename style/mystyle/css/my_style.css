@@ -4,6 +4,9 @@
     display: flex;
     flex-direction: column;
 } */
+body{
+    padding: 0 !important;
+}
 button {
     outline: none !important;
 }
@@ -224,9 +227,14 @@ body {
 }
 
 .mobile-navbar li a {
+    font-family: Kanit;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;    
+    /* White */
+    
     color: #FFFFFF;
-    text-decoration: none;
-    font-size: 20px;
 }
 .mobile-navbar li a:active {
     color: #F16136;
@@ -2532,7 +2540,9 @@ s
 
     color: #57606F;
 }
-
+.thumb.active{
+display: none;
+}
 .value,
 .value2,
 .value3,
@@ -2820,17 +2830,22 @@ input[type="checkbox"] {
 }
 
 .contact_form textarea {
-    border: 1px solid #B1B1B1;
+    /* border: 1px solid #B1B1B1; */
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 8px !important;
 }
-
+.contact_form textarea:focus{
+    border-color: #F16136 !important;
+}
+.contact_form .form-group input:focus{
+    border-color:#F16136 !important ;
+}
 .contact_form .form-group input {
     height: 48px;
     margin-bottom: 25px;
-    border: 1px solid #B1B1B1;
+    /* border: 1px solid #B1B1B1; */
     box-sizing: border-box;
-    border-radius: 8px;
+    border-radius: 8px !important;
 }
 
 .contact_btn {
@@ -3118,16 +3133,12 @@ input[type="checkbox"] {
 
 .qeydiyyat {
     position: absolute;
-    width: 96px;
-    height: 96px;
-    /* left: 877px;
-    top: 297px; */
-
-    /* footer */
+    width: 106px;
+    height: 106px;
     outline: none;
     border: none;
     left: 85%;
-    top: -15%;
+    top: -18%;
     cursor: pointer;
     border-radius: 50%;
     background: #1F3F30;
@@ -3714,4 +3725,40 @@ input {
 }
 .icon-close .x-down:after{
     background-color: #555D69 !important;
+}
+#faqModal .modal-content{
+    width: 74%;
+    margin: auto;
+    max-height: 80%;
+    border-radius: 10px;
+    background-color: #fff;
+padding: 3rem;
+}
+#faqModal .modal-header{
+    flex-direction: column;
+    padding-top: 0px !important;
+}
+#faqModal .modal-header h5{
+font-size: 25px;
+display: block;
+margin: auto;
+font-family: Kanit-medium !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    color: #57606F;
+}
+#faqModal .close{
+    padding: 2rem 3rem !important;
+}
+#faqModal .close span{
+    font-size: 25px;
+}
+#faqModal .modal-body{
+    font-size:16px;
+    font-weight: 400;
+    line-height: 1.5;
+font-family: Kanit;
+color: #57606F;
+
 }

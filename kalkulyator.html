@@ -21,7 +21,70 @@
 
     <!-- /////////////// -->
     <style>
-       
+       select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border:none;
+  border-bottom: 1px solid  #DFE4EA;
+  background: #fff;
+  background-image: none;
+}
+select option:hover{
+    background-color: #F16136 !important;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 3em;
+  line-height: 3;
+  background: grey;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  font-family:Kanit;
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+align-items: center;
+
+/* Main color */
+
+color: #57606F;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #FFFFFF;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #F16136;
+}
+
 /*====================== Check Boxes Styles ========================*/
  input[type='checkbox'] {
 	 opacity: 0;
@@ -266,11 +329,13 @@ input[type='checkbox']#checkbox-o2 + label {
                     <option >ABŞ</option>
                     <option >İngiltərə</option>
                 </select> -->
-                <select class="select_calc">
-                    <option value="">Türkiyədən</option>
-                    <option value="1">ABŞ</option>
-                  </select>
-
+                <div class="select">
+                    <select name="slct" id="slct">
+                      <option selected disabled>Türkiyədən</option>
+                      <option value="2">ABS</option>
+                      <option value="3">Fransa</option>
+                    </select>
+                  </div>
             </div>
 
             <div class="labelss col-12 p-0">

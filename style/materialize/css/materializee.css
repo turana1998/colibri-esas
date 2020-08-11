@@ -90,14 +90,14 @@
   top: 7px;
   background-color: transparent !important;
   width:auto;
-  padding: 0 10px;
+  padding: 0 0px;
 }
 .berpa_form input[type=email]:not(.browser-default):focus:not([readonly])+label {
 
   top: 7px;
   background-color: transparent !important;
   width:auto;
-  padding: 0 10px;
+  padding: 0 0px;
 }
 .berpa_form .input-field>label{
   left: 18px !important;
@@ -465,7 +465,7 @@ textarea.materialize-textarea:focus:not([readonly])+label {
   top: 7px;
   background-color: white;
   width:auto;
-  padding: 0 10px;
+  padding: 0 0px;
 }
 
 input:not([type]):focus.valid~label,

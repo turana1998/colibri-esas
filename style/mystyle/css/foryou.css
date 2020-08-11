@@ -24,7 +24,9 @@ li.nav-item.dropdown::marker {
   left: -3px;
 }
 
-
+.qeydd{
+  display: none;
+}
 .nav-item-drop:hover>.dropdown-content {
   display: block !important;
 

@@ -155,11 +155,13 @@ body {
 }
 
 .xidmet {
+    border: 2px solid #F16136 !important;
     min-width: 0 !important;
-    width: 86% !important;
+    width: 95% !important;
     height: auto !important;
     margin-left: 0px !important;
-    left: 7px !important;
+    left: -13px !important;
+    top: 5px !important;
     background: #FFFFFF;
     /* Second color */
 
@@ -3765,10 +3767,6 @@ color: #57606F;
 
 
 }
-
-
-
-
 /*page preloader*/
 .preloader {
 	position: fixed;

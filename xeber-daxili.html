@@ -372,7 +372,7 @@
             <div id="costumModal15" class="modal" data-easein="bounceRightIn" tabindex="-1" role="dialog"
                 aria-labelledby="costumModalLabel" aria-hidden="true">
                 <div class="modal-dialog centered">
-                    <div class="modal-content giris_modal">
+                    <div class="modal-content giris_modal"id="giris_modal">
                         <div class="modal-header" style="justify-content: center !important;">
                             <h5 class="giris_title">GİRİŞ</h5>
                             <img  data-toggle="modal" data-dismiss="modal" src="style/mystyle/img/back-green.png">
@@ -385,9 +385,9 @@
                                 <div class="form-group" style="margin-top: 80px !important">
                                    
                                     <button class="cixis" data-toggle="modal" data-dismiss="modal"></button>
-                                    <button class="qeydiyyat" data-toggle="modal" data-dismiss="modal"
-                                        data-target="#qeydiyyat"><img
-                                            src="style/mystyle/img/qeydiyat.png">Qeydiyyat</button>
+                                  <a onclick="margintop()" data-toggle="modal" 
+                                  data-target="#qeydiyyat">  <button class="qeydiyyat" ><img
+                                        src="style/mystyle/img/qeydiyat.png">Qeydiyyat</button></a>
                                             <div class="input-field ">
                                                 <input id="s" type="text" class="validate">
                                                 <label for="s">Elektron poçt</label>
@@ -398,9 +398,9 @@
                                     <label for="sifre">Şifrə</label>
                                 </div>
                                 <button type="button" class=" giris_btn" data-dismiss="modal">DAXİL OL</button>
-                                <button class="sifreberpa" data-toggle="modal" data-dismiss="modal"
-                                    data-target="#sifreberpa">Şifrənizi
-                                    unutmusunuz?</button>
+                                <a data-toggle="modal" onclick="margintop2()"
+                                data-target="#sifreberpa"><button class="sifreberpa" >Şifrənizi
+                                    unutmusunuz?</button></a>
                             </form>
                         </div>
                         <div class="">
@@ -412,19 +412,19 @@
 
         </div>
     </div>
-    <div class="modal fade p-0" id="qeydiyyat" tabindex="-1" role="dialog" data-easein="flipXIn"
+    <div class="modal fade p-0" id="qeydiyyat" tabindex="-1" role="dialog" data-easein="flipXIn" 
         aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered d-flex" role="document">
             <div class="modal-content qeydiyyat_modal">
                 <div class="modal-header" style="justify-content: center !important;">
                     <h5 class="qeydiyyat_title">QEYDİYYAT</h5>
-                    <img  data-toggle="modal" data-dismiss="modal" src="style/mystyle/img/back-white.png">
+                    <img onclick="marginbottom()"  data-toggle="modal" data-dismiss="modal" data-easeout="flipXIn" src="style/mystyle/img/back-white.png">
                     
                 </div>
                 <div class="modal-body">
                     <form class="d-flex form_qeydiyyat ">
                         <div class="row">
-                            <button class="cixis_qeydiyat" data-toggle="modal" data-dismiss="modal"></button>
+                            <button onclick="marginbottom()" class="cixis_qeydiyat" data-toggle="modal" data-dismiss="modal"></button>
                             
                                 <div class="input-field  col-6 col-sm-3">
                                     <input class="qeydiyat_input" id="recipient-name" type="text" class="validate">
@@ -559,7 +559,7 @@
                     </form>
                     <p class="qeydiyat_infor">Qeydiyyat düyməsini sıxmaqla Siz saytın qaydaları və şərtləri ilə
                         razılaşırsınız.</p>
-                    <button type="button" class=" qeydiyyat_btn" data-dismiss="modal">QEYDİYYATDAN KEÇ</button>
+                    <button  type="button" class=" qeydiyyat_btn" data-dismiss="modal">QEYDİYYATDAN KEÇ</button>
                 </div>
             </div>
         </div>
@@ -575,7 +575,7 @@
                     </button>
                 </div>
                 <div class="modal-body" style="border: none;">
-                    <button class="cixis_qeydiyat" data-toggle="modal" data-dismiss="modal"></button>
+                    <button onclick="marginbottom2()" class="cixis_qeydiyat" data-toggle="modal" data-dismiss="modal"></button>
                     <form class="d-flex flex-column berpa_form">
                         <div class="input-field col-12" style="width: 90%;
                         margin: auto;margin-top: 40px!important">
@@ -583,7 +583,7 @@
                                 <label for="e-poct">Epoçt</label>
                         </div>
                        
-                        <button type="button" class=" berpa_btn" data-dismiss="modal">E-mail Göndər</button>
+                        <button onclick="marginbottom2()" type="button" class=" berpa_btn" data-dismiss="modal">E-mail Göndər</button>
                     </form>
                 </div>
                 <div class="">
@@ -592,6 +592,9 @@
             </div>
         </div>
     </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+    <script src="./style/materialize/js/materialize.js"></script>
     <script src="./style/bootstrap/jquery/jquery-3.4.1.min.js"></script>
     <script src="./style/bootstrap/jquery/popper.min.js"></script>
     <script src="./style/slick/slick.min.js"></script>
@@ -599,38 +602,34 @@
     <script src="./style/font_awesome/js/all.min.js"></script>
     <script src="./style/mystyle/js/my_style.js"></script>
     <script src="./style/mystyle/js/nav.js"></script>
-    <script src="./style/materialize/js/materialize.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.2/velocity.ui.min.js'></script>
+ 
     <script>
-
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $('.partner-mobile').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [{
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 3
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }]
-            });
+        $(".modal").each(function (l) {
+            $(this).on("show.bs.modal", function (l) {
+                var o = $(this).attr("data-easein");
+                "shake" == o ? $(".modal-dialog").velocity("callout." + o) : "pulse" == o ? $(
+                        ".modal-dialog").velocity("callout." + o) : "tada" == o ? $(".modal-dialog")
+                    .velocity("callout." + o) : "flash" == o ? $(".modal-dialog").velocity("callout." +
+                        o) :
+                    "bounce" == o ? $(".modal-dialog").velocity("callout." + o) : "swing" == o ? $(
+                        ".modal-dialog").velocity("callout." + o) : $(".modal-dialog").velocity(
+                        "transition." + o)
+            })
         });
+        function margintop(){
+            document.getElementById("giris_modal").style.marginTop="11%";
+        }
+        function marginbottom(){
+            document.getElementById("giris_modal").style.marginTop="15%";
+        }
+        function margintop2(){
+            document.getElementById("giris_modal").style.marginTop="22%";
+        }
+        function marginbottom2(){
+            document.getElementById("giris_modal").style.marginTop="15%";
+        }
     </script>
 
 

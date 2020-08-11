@@ -83,3 +83,8 @@ $('.hover-item').hover(function () {
 }, function () {
   $(this).find('.dropdown-content').stop(true, true).delay(500).fadeOut(800);
 });
+//page preloader
+jQuery(".preloaderimg").fadeOut(150);
+jQuery(".preloader").fadeOut(350).delay(200, function(){
+  jQuery(this).remove();
+  });

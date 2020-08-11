@@ -3761,4 +3761,44 @@ font-family: Kanit-medium !important;
 font-family: Kanit;
 color: #57606F;
 
+
+
+
+}
+
+
+
+
+/*page preloader*/
+.preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(255, 255, 255, 0.99);
+	z-index: 13000;
+	height: 100%;
+}
+
+.no-js .preloader,
+.lt-ie9 .preloader,
+.lt-ie10 .preloader {
+	display: none;
+}
+
+.preloader_image {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	background: url(../img/preloader.gif) no-repeat 50% 50% transparent;
+	margin: -50px 0 0 -50px;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.preloader_image {
+		background: url(../img/preloader.gif) no-repeat 50% 50% transparent;
+	}
 }

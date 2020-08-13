@@ -50,7 +50,7 @@ li.nav-item.dropdown::marker {
 .hover-item:hover {}
 
 
-/* .dropbtn {
+ .dropbtn {
   border: none;
   border-radius: 3px;
   background-color: white;
@@ -68,10 +68,10 @@ li.nav-item.dropdown::marker {
   top: 8px;
   left: 3px;
   /* background-color: #F16136; */
-/* height: 60px;
+height: 60px;
   width: 96px;
   align-self: stretch;
-} */
+} 
 
 
 .nav-item {
@@ -79,12 +79,12 @@ li.nav-item.dropdown::marker {
   margin-left: 10px;
 }
 
-/*
+
 .dropdown {
   position: relative;
   display: inline-block;
 
-} */
+}
 
 
 

@@ -214,14 +214,25 @@
     }
 
     .giris_modal {
-        width: 85%
+        width: 86%;
+        margin-left: 3%;
+    }
+    .form_qeydiyyat .row{
+        padding-left: 10px !important;
+    }
+    .qeydiyyat_modal{
+        margin-left: 3%;
+    }
+    .qeydiyyat_modal .modal-header {
+        border: none !important;
+        padding-top: 25px;
     }
     .qeydiyyat{
         left: 80%;
     }
 
     .giris_btn {
-        width: 272px;
+        width: 254px;
     }
 
     .container {

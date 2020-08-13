@@ -20,7 +20,7 @@
 
 <body>
     <div id="overlay"></div>
-    <div class="containernav d-flex">
+    <div class="containernav d-flex sticky-top  elave">
         <nav class="navbar navbar-expand-lg navbar-light  pt-0">
             <button class="navbar-toggler col-auto" type="button" data-toggle="collapse" id="mobile-toggle"
                 data-target="navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false"
@@ -221,19 +221,35 @@
                 <h3 class="contact_title">BİZƏ YAZIN</h3>
                 <form>
                     <div class="form-row contact_form ">
-                        <div class="form-group col-md-12">
+                        <!-- <div class="form-group col-md-12">
                             <input type="text" class="form-control" id="adsoyad" placeholder="Ad Soyad">
+                        </div> -->
+                        <div class="input-field col-md-12">
+                            <input id="Ad Soyad" type="text" class="validate">
+                            <label for="Ad Soyad">Ad Soyad</label>
                         </div>
-                        <div class="form-group col-xl-6 col-md-12">
+                        <div class="input-field col-xl-6 col-md-12">
+                            <input id="Telefon" type="text" class="validate">
+                            <label for="Telefon">Telefon</label>
+                        </div>
+                        <!-- <div class="form-group col-xl-6 col-md-12">
                             <input type="tel" class="form-control" id="tel" placeholder="Telefon">
+                        </div> -->
+                        <div class="input-field col-xl-6 col-md-12">
+                            <input id="E-poçt" type="email" class="validate">
+                            <label for="E-poçt">E-poçt</label>
                         </div>
-                        <div class="form-group col-xl-6 col-md-12">
+                        <!-- <div class="form-group col-xl-6 col-md-12">
                             <input type="email" class="form-control" id="email" placeholder="E-poçt">
-                        </div>
-                        <div class="form-group col-md-12">
+                        </div> -->
+                        <div class="input-field col-md-12">
+                            <textarea id="Mesaj" class="materialize-textarea" style="height: 290px !important;resize: none;"></textarea>
+                            <label for="Mesaj">Mesaj</label>
+                          </div>
+                        <!-- <div class="form-group col-md-12">
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="20" cols="84"
                                 placeholder="Mesaj"></textarea>
-                        </div>
+                        </div> -->
                     </div>
 
                     <button type="submit" class="btn btn-primary contact_btn">Göndər</button>
@@ -285,7 +301,7 @@
                 <div class="row">
                     <div
                         class="col-12 col-sm-12 col-md-6 col-lg-7 col-xl-7 d-none d-sm-flex contact_location  mt-4 mb-4 ">
-                        <img class="location_img" src="style/mystyle/img/locationn.png">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57802.11884082347!2d49.835905426304464!3d40.41218122021446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403088032671a5cd%3A0xf31a12d60b93e856!2zTsmZcmltYW5vdiwgQmFrxLEsIEF6yZlyYmF5Y2Fu!5e0!3m2!1saz!2s!4v1597308902051!5m2!1saz!2s" width="600" height="140" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
                     </div>
 
@@ -665,6 +681,7 @@
     </div>
     <script src="./style/bootstrap/jquery/jquery-3.4.1.min.js"></script>
     <script src="./style/bootstrap/jquery/popper.min.js"></script>
+    <script src="./style/materialize/js/materialize.js"></script>
     <script src="./style/slick/slick.min.js"></script>
     <script src="./style/bootstrap/js/bootstrap.min.js"></script>
     <script src="./style/font_awesome/js/all.min.js"></script>

@@ -11,16 +11,100 @@
     <link rel="stylesheet" href="./style/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style/mystyle/css/my_style.css">
     <link rel="stylesheet" href="./style/mystyle/css/responsiv.css">
+    <link rel="stylesheet" href="./style/mystyle/css/dropdown.scss">
     <link rel="stylesheet" href="./style/mystyle/css/foryou.css">
     <link rel="stylesheet" href="https://use.typekit.net/dfw0poo.css">
     <link rel="stylesheet" href="./style/materialize/css/materializee.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
+<style>
+    menu,
+.submenu {
+  list-style-type: none;
+}
+.logo {
+  font-size: 20px;
+  padding: 7.5px 10px 7.5px 0;
+}
+.item {
+  padding: 10px;
+}
+.item.button {
+  padding: 9px 5px;
+}
+.item:not(.button) a:hover,
+.item a:hover::after {
+  color: #ccc;
+}
+/* Mobile menu */
 
+
+
+.item.button {
+  order: 2;
+}
+.item {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+.active .item {
+  display: block;
+}
+.button.secondary {
+  /* divider between buttons and menu links */
+  border-bottom: 1px #444 solid;
+}
+/* Submenu up from mobile screens */
+.submenu {
+  display: none;
+}
+.submenu-active .submenu {
+  display: block;
+}
+.has-submenu i {
+  font-size: 12px;
+}
+.has-submenu > a::after {
+  font-family: "Font Awesome 5 Free";
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 900;
+  content: "\f078";
+  color: white;
+  padding-left: 5px;
+}
+.subitem a {
+  padding: 10px 15px;
+}
+.submenu-active {
+  background-color: #111;
+  border-radius: 3px;
+}
+.carousel-item:hover img, .carousel-item:focus img {
+    transform-origin: 50% 65%;
+  transition: transform 5s, filter 3s ease-in-out;
+  filter: brightness(150%);
+  
+}
+.elave {
+    position: fixed;
+}
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+.containernav{
+    background-color: #FFFFFF;
+}
+</style>
 <body>
     <div id="overlay"></div>
-    <div class="containernav d-flex">
+    <div class="containernav d-flex sticky-top opacity-n elave">
         <nav class="navbar navbar-expand-lg navbar-light  pt-0">
             <button class="navbar-toggler col-auto" type="button" data-toggle="collapse" id="mobile-toggle"
                 data-target="navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false"
@@ -134,20 +218,20 @@
     <div class=" mobile-navbar ">
         <ul class="pl-0 beShow " id="mobile-ul">
             <li><a href="haqqinda.html">Haqqımızda</a></li>
-            <li class="nav-item dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
-                    aria-expanded="false">Xidmətlər</a>
-                <div class="dropdown-menu xidmet  ">
-                    <a class="xidmet-a" href="xidmetlerimiz.html">Təhlükəli yüklərin daşınması</a>
-                    <a class="xidmet-a" href="#">Maye məhsulların daşınması</a>
-                    <a class="xidmet-a" href="#">Gömrük sənədləşməsi</a>
-                    <a class="xidmet-a" href="#">Təhlükəli yüklərin daşınması</a>
-                    <a class="xidmet-a" href="#">Maye məhsulların daşınması</a>
-                    <a class="xidmet-a" href="#">Gömrük sənədləşməsi</a>
-
-
-                </div>
-            </li>          
+            <li class="dropdown">
+                <a href="#" data-toggle="dropdown">Second Menu <i class="icon-arrow"></i></a>
+                <ul >
+                    <li class="item has-submenu">
+                        <a tabindex="0">Services</a>
+                        <ul class="submenu">
+                          <li class="subitem"><a href="#">Design</a></li>
+                          <li class="subitem"><a href="#">Development</a></li>
+                          <li class="subitem"><a href="#">SEO</a></li>
+                          <li class="subitem"><a href="#">Copywriting</a></li>
+                        </ul>
+                      </li>
+                </ul>
+            </li>        
              <li><a href="tarifler.html">Tariflər</a></li>
             <li><a href="kalkulyator.html">Kalkulyator</a></li>
             <li><a href="f.a.q.html">F.A.Q</a></li>
@@ -740,7 +824,7 @@
                                    
                                     <button class="cixis" data-toggle="modal" data-dismiss="modal"></button>
                                   <a onclick="margintop()" data-toggle="modal" 
-                                  data-target="#qeydiyyat">  <button class="qeydiyyat" ><img
+                                  data-target="#qeydiyyat">  <button class="qeydiyyat" id="qeydiyat_btnn" ><img
                                         src="style/mystyle/img/qeydiyat.png">Qeydiyyat</button></a>
                                             <div class="input-field ">
                                                 <input id="s" type="text" class="validate">
@@ -975,20 +1059,53 @@
         });
         function margintop(){
             document.getElementById("giris_modal").style.marginTop="11%";
+            document.getElementById("qeydiyat_btnn").style.display="none";
         }
         function marginbottom(){
             document.getElementById("giris_modal").style.marginTop="15%";
+            document.getElementById("qeydiyat_btnn").style.display="block";
         }
         function margintop2(){
             document.getElementById("giris_modal").style.marginTop="22%";
+            
         }
         function marginbottom2(){
             document.getElementById("giris_modal").style.marginTop="15%";
         }
     </script>
-    <script>
-        
-    </script>
+  <script>
+/* Toggle mobile menu */
+
+/* Activate Submenu */
+function toggleItem() {
+  if (this.classList.contains("submenu-active")) {
+    this.classList.remove("submenu-active");
+  } else if (menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+    this.classList.add("submenu-active");
+  } else {
+    this.classList.add("submenu-active");
+  }
+}
+
+/* Close Submenu From Anywhere */
+function closeSubmenu(e) {
+  let isClickInside = menu.contains(e.target);
+
+  if (!isClickInside && menu.querySelector(".submenu-active")) {
+    menu.querySelector(".submenu-active").classList.remove("submenu-active");
+  }
+}
+/* Event Listeners */
+// toggle.addEventListener("click", toggleMenu, false);
+// for (let item of items) {
+//   if (item.querySelector(".submenu")) {
+//     item.addEventListener("click", toggleItem, false);
+//   }
+//   item.addEventListener("keypress", toggleItem, false);
+// }
+// document.addEventListener("click", closeSubmenu, false);
+</script>
 </body>
 
 </html>
